@@ -1,0 +1,12 @@
+server:
+  port: 8080
+spring:
+  cloud:
+    gcp:
+      sql:
+        database-name: postgres
+        instance-connection-name: joe-experimental-project:us-central1:quote-db-instance
+  datasource:
+    url: jdbc:postgresql://localhost:5432/
+    username: "${sm://datasource-username}"
+    password: "${sm://datasource-password}"
